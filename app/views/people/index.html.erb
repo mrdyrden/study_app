@@ -1,6 +1,7 @@
-<h1> This is my page biatch </h1>
-<% if params[:consistency] %>
+<h1> People </h1>
 <ul>
- <li><%= params[:consistency] %></li>
-</ul>
+<% @people.each do |person| %>
+ <li><%= link_to person,person_path(person)%></li>
 <%end%>
+</ul>
+
